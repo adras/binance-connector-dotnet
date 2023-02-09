@@ -160,6 +160,7 @@ namespace Binance.Common
                                 try
                                 {
                                     httpException = JsonConvert.DeserializeObject<BinanceClientException>(contentString);
+                                    httpException.JsonContent = contentString;
                                 }
                                 catch (JsonReaderException ex)
                                 {
